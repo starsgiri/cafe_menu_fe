@@ -25,7 +25,7 @@ This is a static website that can be hosted on GitHub Pages.
 3. Navigate to "Pages" section
 4. Select the branch (main/master) and root folder
 5. Click Save
-6. Your site will be live at: `https://yourusername.github.io/cafe_menu_fe/`
+6. Your site will be live at: `https://starsgiri.github.io/cafe_menu_fe/`
 
 ## Local Development
 
