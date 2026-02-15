@@ -497,7 +497,7 @@ a:active {
 }
 
 .service-features li:before {
-  content: "\u2022";
+  content: "•";
   position: absolute;
   left: 0;
   color: #8b4513;
