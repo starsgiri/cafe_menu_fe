@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <title>Locations</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="locations">
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">Menu</a>
+            <a href="locations.html" class="nav-link active">Locations</a>
+        </nav>
+        <header>
+            <h1>Our Locations</h1>
+            <p class="subtitle">Visit us at any of our cozy cafe locations</p>
+        </header>
+        <hr>
+        <div class="content-wrapper">
+            <main class="locations-list">
+                <section>
+                    <article class="location">
+                        <h2 class="city">New York City</h2>
+                        <p class="address">123 Broadway Ave, New York, NY 10007</p>
+                        <p class="hours">Open Daily: 7:00 AM - 9:00 PM</p>
+                        <a href="https://www.google.com/maps/place/123+Broadway,+New+York,+NY+10007" target="_blank" class="map-link">📍 View on Google Maps</a>
+                    </article>
+                    <article class="location">
+                        <h2 class="city">Los Angeles</h2>
+                        <p class="address">456 Hollywood Blvd, Los Angeles, CA 90028</p>
+                        <p class="hours">Open Daily: 6:30 AM - 10:00 PM</p>
+                        <a href="https://www.google.com/maps/place/456+Hollywood+Blvd,+Los+Angeles,+CA+90028" target="_blank" class="map-link">📍 View on Google Maps</a>
+                    </article>
+                    <article class="location">
+                        <h2 class="city">Chicago</h2>
+                        <p class="address">789 Michigan Ave, Chicago, IL 60611</p>
+                        <p class="hours">Open Daily: 7:00 AM - 9:00 PM</p>
+                        <a href="https://www.google.com/maps/place/789+N+Michigan+Ave,+Chicago,+IL+60611" target="_blank" class="map-link">📍 View on Google Maps</a>
+                    </article>
+                </section>
+            </main>
+            <aside class="image-slider">
+                <div class="slider-container">
+                    <div class="slide active">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=500&fit=crop" alt="Cozy cafe interior">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=500&fit=crop" alt="Coffee and pastries">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=500&fit=crop" alt="Cafe seating area">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=400&h=500&fit=crop" alt="Fresh brewed coffee">
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </aside>
+        </div>
+        <hr class="bottom-line">
+        <footer>
+            <address>
+                <p>
+                    <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
+                </p>
+                <p class="address">123 Free Code Camp Drive</p>
+            </address>
+        </footer>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            
+            slides[slideIndex - 1].classList.add("active");
+            dots[slideIndex - 1].classList.add("active");
+            
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function currentSlide(n) {
+            slideIndex = n - 1;
+            showSlides();
+        }
+    </script>
