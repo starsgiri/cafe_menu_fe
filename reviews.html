@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews - Camper Cafe</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body class="review-page-body">
+    <div class="reviews-page">
+        <nav class="navigation">
+            <a href="landing.html" class="nav-link">Home</a>
+            <a href="index.html" class="nav-link">Menu</a>
+            <a href="locations.html" class="nav-link">Locations</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="reviews.html" class="nav-link active">Reviews</a>
+        </nav>
+
+        <section class="multi-step-form-section">
+            <div class="form-container">
+                <!-- Progress Indicator -->
+                <div class="progress-indicator">
+                    <div class="step active" data-step="1">
+                        <div class="step-circle">
+                            <span>1</span>
+                        </div>
+                        <p class="step-label">Contact Information</p>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-circle">
+                            <span>2</span>
+                        </div>
+                        <p class="step-label">Visit Details</p>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-circle">
+                            <span>3</span>
+                        </div>
+                        <p class="step-label">Your Feedback</p>
+                    </div>
+                </div>
+
+                <div class="form-content-wrapper">
+                    <!-- Illustration Side -->
+                    <div class="form-illustration">
+                        <div class="illustration-container">
+                            <svg viewBox="0 0 400 500" class="illustration-svg">
+                                <!-- Person silhouette -->
+                                <ellipse cx="200" cy="450" rx="80" ry="15" fill="#e0e0e0" opacity="0.3"/>
+                                <circle cx="200" cy="150" r="50" fill="#8b4513"/>
+                                <rect x="160" y="200" width="80" height="100" rx="10" fill="#8b4513"/>
+                                <rect x="140" y="220" width="30" height="80" rx="10" fill="#8b4513"/>
+                                <rect x="230" y="220" width="30" height="80" rx="10" fill="#8b4513"/>
+                                <rect x="170" y="300" width="25" height="120" rx="10" fill="#654321"/>
+                                <rect x="205" y="300" width="25" height="120" rx="10" fill="#654321"/>
+                                
+                                <!-- Speech bubble 1 -->
+                                <rect x="80" y="80" width="100" height="60" rx="10" fill="#a0522d"/>
+                                <polygon points="120,140 110,155 130,140" fill="#a0522d"/>
+                                <line x1="95" y1="95" x2="165" y2="95" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="95" y1="110" x2="155" y2="110" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="95" y1="125" x2="165" y2="125" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                
+                                <!-- Speech bubble 2 -->
+                                <rect x="210" y="200" width="100" height="60" rx="10" fill="#a0522d"/>
+                                <polygon points="270,260 280,275 260,260" fill="#a0522d"/>
+                                <line x1="225" y1="215" x2="295" y2="215" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="225" y1="230" x2="285" y2="230" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="225" y1="245" x2="295" y2="245" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Form Side -->
+                    <div class="form-fields">
+                        <form id="reviewForm" class="modern-review-form">
+                            <!-- Step 1: Contact Information -->
+                            <div class="form-step active" data-step="1">
+                                <h2 class="form-step-title">Contact Information</h2>
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Visit Details -->
+                            <div class="form-step" data-step="2">
+                                <h2 class="form-step-title">Visit Details</h2>
+                                <div class="form-group">
+                                    <label for="location">Location Visited</label>
+                                    <select id="location" name="location" required>
+                                        <option value="">Select a location</option>
+                                        <option value="New York City">New York City</option>
+                                        <option value="Los Angeles">Los Angeles</option>
+                                        <option value="Chicago">Chicago</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="visitDate">Visit Date</label>
+                                    <input type="date" id="visitDate" name="visitDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating">Rating</label>
+                                    <div class="star-rating-modern">
+                                        <input type="radio" id="star5" name="rating" value="5" required>
+                                        <label for="star5" title="5 stars">★</label>
+                                        <input type="radio" id="star4" name="rating" value="4">
+                                        <label for="star4" title="4 stars">★</label>
+                                        <input type="radio" id="star3" name="rating" value="3">
+                                        <label for="star3" title="3 stars">★</label>
+                                        <input type="radio" id="star2" name="rating" value="2">
+                                        <label for="star2" title="2 stars">★</label>
+                                        <input type="radio" id="star1" name="rating" value="1">
+                                        <label for="star1" title="1 star">★</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Feedback -->
+                            <div class="form-step" data-step="3">
+                                <h2 class="form-step-title">Your Feedback</h2>
+                                <div class="form-group">
+                                    <label for="review">Tell us about your experience</label>
+                                    <textarea id="review" name="review" rows="6" required placeholder="Share your thoughts about our service, food, ambiance..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" id="recommend" name="recommend">
+                                        <span>I would recommend Camper Cafe to friends and family</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <div class="form-navigation">
+                                <button type="button" class="btn-form btn-cancel" id="cancelBtn">CANCEL</button>
+                                <div class="btn-group-right">
+                                    <button type="button" class="btn-form btn-prev" id="prevBtn" style="display:none;">PREVIOUS</button>
+                                    <button type="button" class="btn-form btn-next" id="nextBtn">NEXT</button>
+                                    <button type="submit" class="btn-form btn-submit" id="submitBtn" style="display:none;">SUBMIT</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="reviews-display-section">
+            <h2>What Our Customers Say</h2>
+            <div id="reviewsContainer" class="reviews-container">
+                <!-- Reviews will be dynamically loaded here -->
+            </div>
+            <div id="noReviews" class="no-reviews">
+                <p>No reviews yet. Be the first to share your experience!</p>
+            </div>
+        </section>
+
+        <hr class="bottom-line">
+        <footer>
+            <address>
+                <p>
+                    <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
+                </p>
+                <p class="address">123 Free Code Camp Drive</p>
+            </address>
+        </footer>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 3;
+
+        // Load reviews when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReviews();
+            updateFormNavigation();
+        });
+
+        // Next button
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            if (validateStep(currentStep)) {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    updateFormStep();
+                }
+            }
+        });
+
+        // Previous button
+        document.getElementById('prevBtn').addEventListener('click', function() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateFormStep();
+            }
+        });
+
+        // Cancel button
+        document.getElementById('cancelBtn').addEventListener('click', function() {
+            if (confirm('Are you sure you want to cancel? Your progress will be lost.')) {
+                document.getElementById('reviewForm').reset();
+                currentStep = 1;
+                updateFormStep();
+            }
+        });
+
+        // Form submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!validateStep(currentStep)) {
+                return;
+            }
+            
+            // Get form values
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const location = document.getElementById('location').value;
+            const visitDate = document.getElementById('visitDate').value;
+            const rating = document.querySelector('input[name="rating"]:checked').value;
+            const reviewText = document.getElementById('review').value;
+            const recommend = document.getElementById('recommend').checked;
+            
+            // Create review object
+            const review = {
+                id: Date.now(),
+                name: fullName,
+                email: email,
+                phone: phone,
+                location: location,
+                visitDate: visitDate,
+                rating: parseInt(rating),
+                review: reviewText,
+                recommend: recommend,
+                date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+            };
+            
+            // Get existing reviews from localStorage
+            let reviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
+            
+            // Add new review
+            reviews.unshift(review);
+            
+            // Save to localStorage
+            localStorage.setItem('cafeReviews', JSON.stringify(reviews));
+            
+            // Reset form
+            this.reset();
+            currentStep = 1;
+            updateFormStep();
+            
+            // Reload reviews display
+            loadReviews();
+            
+            // Show success message
+            alert('Thank you for your review! It has been submitted successfully.');
+            
+            // Scroll to reviews section
+            document.querySelector('.reviews-display-section').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function updateFormStep() {
+            // Update step visibility
+            document.querySelectorAll('.form-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+            
+            // Update progress indicator
+            document.querySelectorAll('.progress-indicator .step').forEach(step => {
+                const stepNum = parseInt(step.dataset.step);
+                if (stepNum < currentStep) {
+                    step.classList.add('completed');
+                    step.classList.remove('active');
+                } else if (stepNum === currentStep) {
+                    step.classList.add('active');
+                    step.classList.remove('completed');
+                } else {
+                    step.classList.remove('active', 'completed');
+                }
+            });
+            
+            updateFormNavigation();
+        }
+
+        function updateFormNavigation() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Show/hide previous button
+            prevBtn.style.display = currentStep > 1 ? 'inline-block' : 'none';
+            
+            // Show/hide next and submit buttons
+            if (currentStep === totalSteps) {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'inline-block';
+            } else {
+                nextBtn.style.display = 'inline-block';
+                submitBtn.style.display = 'none';
+            }
+        }
+
+        function validateStep(step) {
+            const currentStepElement = document.querySelector(`.form-step[data-step="${step}"]`);
+            const inputs = currentStepElement.querySelectorAll('input[required], select[required], textarea[required]');
+            
+            for (let input of inputs) {
+                if (input.type === 'radio') {
+                    const radioGroup = currentStepElement.querySelectorAll(`input[name="${input.name}"]`);
+                    const isChecked = Array.from(radioGroup).some(radio => radio.checked);
+                    if (!isChecked) {
+                        alert('Please complete all required fields before proceeding.');
+                        return false;
+                    }
+                } else if (!input.value.trim()) {
+                    alert('Please complete all required fields before proceeding.');
+                    input.focus();
+                    return false;
+                }
+            }
+            
+            // Additional email validation
+            if (step === 1) {
+                const email = document.getElementById('email').value;
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+
+        // Function to load and display reviews
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem('cafeReviews')) || [];
+            const container = document.getElementById('reviewsContainer');
+            const noReviewsMsg = document.getElementById('noReviews');
+            
+            if (reviews.length === 0) {
+                container.innerHTML = '';
+                noReviewsMsg.style.display = 'block';
+                return;
+            }
+            
+            noReviewsMsg.style.display = 'none';
+            
+            container.innerHTML = reviews.map(review => `
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="review-info">
+                            <h3 class="reviewer-name">${escapeHtml(review.name)}</h3>
+                            <p class="review-location">Location: ${escapeHtml(review.location)}</p>
+                            <p class="review-date">${review.date}</p>
+                        </div>
+                        <div class="review-rating">
+                            ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}
+                        </div>
+                    </div>
+                    <p class="review-text">${escapeHtml(review.review)}</p>
+                    ${review.recommend ? '<p class="recommendation">Recommends Camper Cafe</p>' : ''}
+                </article>
+            `).join('');
+        }
+
+        // Function to escape HTML to prevent XSS
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
